@@ -12,10 +12,10 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
       - name: Cache deps
-          uses: actions/cache@v3
-          with:
-            path: ~/.npm
-            key: node-modules-${{ hashFiles('**/package-lock.json') }}
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm install
       - name: Test application
@@ -42,10 +42,10 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
       - name: Cache deps
-          uses: actions/cache@v3
-          with:
-            path: ~/.npm
-            key: node-modules-${{ hashFiles('**/package-lock.json') }}
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm install
       - name: Build application
